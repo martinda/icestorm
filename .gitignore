@@ -1,2 +1,9 @@
 icestorm-win32.zip
 icestorm-win32/
+
+# vim
+Session.vim
+*.swp
+
+# Lattice
+license.dat

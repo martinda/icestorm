@@ -9,6 +9,8 @@ all: icemulti$(EXE)
 icemulti$(EXE): icemulti.o
 	$(CXX) -o $@ $(LDFLAGS) $^ $(LDLIBS)
 
+test: all
+
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp icemulti$(EXE) $(DESTDIR)$(PREFIX)/bin/icemulti$(EXE)

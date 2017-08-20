@@ -2,7 +2,7 @@ include config.mk
 
 SUBDIRS = icebox icepack iceprog icemulti icepll icetime icebram
 
-all clean install uninstall:
+all test clean install uninstall:
 	for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir $@ || exit; \
 	done

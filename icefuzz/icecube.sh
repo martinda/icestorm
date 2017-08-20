@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Installing iCEcube2:
-#  - Install iCEcube2.2015.08 in /opt/lscc/iCEcube2.2015.08
-#  - Install License in /opt/lscc/iCEcube2.2015.08/license.dat
+#  - Install iCEcube2.2017.01 in /opt/lscc/iCEcube2.2017.01
+#  - Install License in /opt/lscc/iCEcube2.2017.01/license.dat
 #
 # Creating a project:
 #  - <project_name>.v    ## HDL sources (use "top" as name for the top module)
@@ -21,7 +21,7 @@
 # sudo apt-get install libxcursor1:i386 libxinerama1:i386 libfreetype6:i386
 # sudo apt-get install libfontconfig1:i386 libglib2.0-0:i386 libstdc++6:i386 libelf1:i386
 #
-# icecubedir="/opt/lscc/iCEcube2.2015.08"
+# icecubedir="/opt/lscc/iCEcube2.2017.01"
 # sudo sed -ri "1 s,/bin/sh,/bin/bash,;" $icecubedir/synpbase/bin/synplify_pro
 # sudo sed -ri "1 s,/bin/sh,/bin/bash,;" $icecubedir/synpbase/bin/c_hdl
 # sudo sed -ri "1 s,/bin/sh,/bin/bash,;" $icecubedir/synpbase/bin/syn_nfilter
@@ -58,7 +58,7 @@ fi
 
 set -ex
 set -- ${1%.v}
-icecubedir="${ICECUBEDIR:-/opt/lscc/iCEcube2.2015.08}"
+icecubedir="${ICECUBEDIR:-/opt/lscc/iCEcube2.2017.01}"
 if [ -d $icecubedir/LSE/bin/lin64 ]; then lin_lin64=lin64; else lin_lin64=lin; fi
 export FOUNDRY="$icecubedir/LSE"
 export SBT_DIR="$icecubedir/sbt_backend"

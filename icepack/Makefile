@@ -16,6 +16,8 @@ iceunpack: icepack
 iceunpack.exe:
 	# no iceunpack.exe, use icepack -u
 
+test: all
+
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp icepack$(EXE) $(DESTDIR)$(PREFIX)/bin/icepack$(EXE)

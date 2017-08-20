@@ -9,6 +9,8 @@ all: icepll$(EXE)
 icepll$(EXE): icepll.o
 	$(CXX) -o $@ $(LDFLAGS) $^ $(LDLIBS)
 
+test: all
+
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp icepll$(EXE) $(DESTDIR)$(PREFIX)/bin/icepll$(EXE)

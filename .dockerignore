@@ -1,0 +1,23 @@
+# Git files are not needed
+.git
+
+# Vim files
+Session.vim
+*.swp
+
+# icestorm
+CodeOfConduct
+config.mk
+docs
+examples
+icebox
+icebram
+icecompr
+icefuzz
+icemulti
+icepack
+icepll
+iceprog
+icetime
+Makefile
+README
