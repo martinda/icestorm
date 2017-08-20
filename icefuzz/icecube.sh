@@ -349,6 +349,9 @@ fi
 
 # synthesis (Lattice LSE)
 if true; then
+	type "$icecubedir"/LSE/bin/${lin_lin64}/synthesis
+	readelf -d "$icecubedir"/LSE/bin/${lin_lin64}/synthesis
+	ldd "$icecubedir"/LSE/bin/${lin_lin64}/synthesis
 	"$icecubedir"/LSE/bin/${lin_lin64}/synthesis -f "impl_lse.prj"
 fi
 
