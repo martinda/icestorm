@@ -19,11 +19,14 @@ RUN pip install --no-cache-dir --disable-pip-version-check numpy==1.13.1
 
 # The file utility
 RUN apk add --no-cache \
-    file \
-    libstdc++
+    file
 
 RUN apk add --no-cache --repository "http://dl-3.alpinelinux.org/alpine/edge/testing/" \
     gcompat
+
+# to run ldd inside docker:
+# LD_PRELOAD="/lib/libgcompat.so.0 /usr/lib/libtirpc.so.3" ldd /opt/lscc/iCEcube2.2017.01/LSE/bin/lin64/synthesis
+# I am still unable to run the tool itself though, only ldd
 
 # Icecube (Lattice)
 # sudo apt-get install libc6-i386 zlib1g:i386 libxext6:i386 libpng12-0:i386 libsm6:i386
